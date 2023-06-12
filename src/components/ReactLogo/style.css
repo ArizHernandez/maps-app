@@ -1,0 +1,7 @@
+.react-logo {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  z-index: 999;
+  height: 60px;
+}
