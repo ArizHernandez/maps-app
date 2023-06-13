@@ -1,0 +1,24 @@
+.search__container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search__container .search__input {
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  transition: all 0.1s ease-in-out;
+}
+
+.search__container .search__input:focus {
+  border-color: rgb(32, 154, 206);
+}

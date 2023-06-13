@@ -1,8 +1,10 @@
 import ReactDOM from "react-dom/client";
-import { MapsApp } from "./MapsApp.tsx";
+
 import mapboxgl from "mapbox-gl";
 
-mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY as string;
+import { MapsApp } from "./MapsApp.tsx";
+
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API_KEY as string;
 
 if (!navigator.geolocation) {
   const message = "Geolocation is not supported by your browser";
@@ -12,5 +14,5 @@ if (!navigator.geolocation) {
 }
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <MapsApp />
+    <MapsApp />
 );
