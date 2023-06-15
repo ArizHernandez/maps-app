@@ -8,4 +8,8 @@ export interface MapState {
 
 export interface MapContextProps extends MapState {
   setMap: (map: Map) => void;
+  getRouteBetweenPoints: (
+    start: [number, number],
+    end: [number, number]
+  ) => Promise<void>;
 }

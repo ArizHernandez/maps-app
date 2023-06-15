@@ -7,8 +7,8 @@ import { Feature } from "../../interfaces/placesState";
 import { LngLatLike } from "mapbox-gl";
 
 export const SearchResults = () => {
-  const { places, isLoadingPlaces } = useContext(PlacesContext);
-  const { map } = useContext(MapContext);
+  const { places, isLoadingPlaces, userLocation } = useContext(PlacesContext);
+  const { map, getRouteBetweenPoints } = useContext(MapContext);
 
   const [activePlace, setActivePlace] = useState<string>();
 
@@ -25,6 +25,14 @@ export const SearchResults = () => {
       center: place.center as LngLatLike,
       zoom: 14,
     });
+  };
+
+  const handleDirections = async (place: Feature) => {
+    if (!map) return;
+
+    const [lng, lat] = userLocation as [number, number];
+
+    await getRouteBetweenPoints([lng, lat], place.center as [number, number]);
   };
 
   return (
@@ -47,6 +55,9 @@ export const SearchResults = () => {
             className={`btn ${
               place.id === activePlace ? "btn-primary" : "btn-outline-primary"
             }`}
+            onClick={() => {
+              handleDirections(place);
+            }}
           >
             Direcciones
           </button>

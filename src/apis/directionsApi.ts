@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const directionsApi = axios.create({
-  baseURL: `${import.meta.env.VITE_MAPBOX_API_URL}/mapbox/driving`,
+  baseURL: `${import.meta.env.VITE_MAPBOX_API_URL}/directions/v5/mapbox/driving`,
   headers: {
     "Content-Type": "application/json",
   },
@@ -11,6 +11,7 @@ const directionsApi = axios.create({
     language: "es",
     alternatives: false,
     steps: false,
+    overview: "simplified"
   },
 });
 

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const searchApi = axios.create({
-  baseURL: `${import.meta.env.VITE_MAPBOX_API_URL}/mapbox.places`,
+  baseURL: `${import.meta.env.VITE_MAPBOX_API_URL}/geocoding/v5/mapbox.places`,
   headers: {
     "Content-Type": "application/json",
   },
