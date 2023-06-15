@@ -3,10 +3,10 @@ import { HomeScreen } from "./screens";
 
 export const MapsApp = () => {
   return (
-    <MapProvider>
-      <PlacesProvider>
+    <PlacesProvider>
+      <MapProvider>
         <HomeScreen />
-      </PlacesProvider>
-    </MapProvider>
+      </MapProvider>
+    </PlacesProvider>
   );
 };

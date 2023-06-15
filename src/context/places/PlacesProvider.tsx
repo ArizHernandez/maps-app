@@ -28,7 +28,6 @@ export const PlacesProvider = ({ children }: Props) => {
       type: "setPlaces",
       payload: places?.features || [],
     });
-    console.log(places);
   };
 
   useEffect(() => {

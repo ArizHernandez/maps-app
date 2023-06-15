@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import "./style.css";
+
 import { MapContext, PlacesContext } from "../../context";
+import "./styles.css";
 
 export const BtnMyLocation = () => {
   const { isMapReady, map } = useContext(MapContext);

@@ -1,0 +1,39 @@
+.search-result__list {
+  padding-left: 0px;
+  max-height: 40vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #fff;
+}
+
+.search-result__list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.search-result__list::-webkit-scrollbar-thumb {
+  width: 7px;
+  background-color: #ccc;
+  border-radius: 7px;
+}
+
+.search-result__list .search-result__item .search-result__item-place {
+  text-transform: capitalize;
+}
+
+.search-result__list .search-result__item .search-result__item-decription {
+  font-size: 1.2rem;
+}
+
+.search-result__item {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.search-result__item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.search-result__item.active {
+  background-color: #eee;
+}

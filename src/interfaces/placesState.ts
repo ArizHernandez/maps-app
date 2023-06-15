@@ -1,3 +1,5 @@
+import { LngLatLike } from "mapbox-gl";
+
 export interface PlacesState {
   isLoading:        boolean;
   isLoadingPlaces:  boolean;
@@ -48,7 +50,7 @@ export interface Context {
 }
 
 export interface Geometry {
-  coordinates: number[];
+  coordinates: LngLatLike;
   type:        string;
 }
 

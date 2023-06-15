@@ -1,6 +1,6 @@
 import reactLogo from "../../assets/react.svg";
 
-import "./style.css";
+import "./styles.css";
 
 export const ReactLogo = () => {
   return <img src={reactLogo} className="react-logo" />;

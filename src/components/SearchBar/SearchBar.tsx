@@ -1,7 +1,8 @@
 import { ChangeEvent, useContext, useRef } from "react";
 
-import "./style.css";
+import "./styles.css";
 import { PlacesContext } from "../../context";
+import { SearchResults } from "..";
 
 export const SearchBar = () => {
   const debounceRef = useRef<number>();
@@ -25,6 +26,7 @@ export const SearchBar = () => {
         placeholder="Search for a location"
         onChange={onQueryChange}
       />
+      <SearchResults />
     </div>
   );
 };
